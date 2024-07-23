@@ -1,9 +1,9 @@
-class Solution {
-    public boolean isPowerOfFour(int n) {
+class PowerOfThree {
+    public boolean isPowerOfThree(int n) {
       long i = 1;
       while (i < n)
      {
-         i = i * 4;
+         i = i * 3;
      }  
     
     if (i == n)

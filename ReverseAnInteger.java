@@ -1,4 +1,4 @@
-class Solution {
+class ReverseAnInteger {
     public int reverse(int x) {
       int r,rev=0 , target =x;
         while (x!=0){

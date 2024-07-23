@@ -1,4 +1,4 @@
-class Solution {
+class AddTwoIntegers {
     public int sum(int num1, int num2) {
         
         int x;
