@@ -1,18 +1,30 @@
 public class Main {
-   static class Solution {
-        public int sum(int num1, int num2) {
+    static class IntegerToRoman {
+        public String intToRoman(int num) {
+            String roman ="";
+            int[] value = {1000,900,500,400,100,90,50,40,10,9,5,4,1};
+            String[] romanletters = {"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
 
-            int x;
-            x= num1+num2;
-            return x;
-
+            for(int i=0; i<value.length; i++){
+                while(num >= value[i]){
+                    roman = roman+romanletters[i];
+                    num = num-value[i]  ;
+                }
+            }
+            return roman;
         }
     }
 
+
     public static void main(String[] args) {
-        Solution S = new Solution();
-        System.out.println(S.sum(2,3));
+        IntegerToRoman I = new IntegerToRoman();
+        System.out.println( );
 
 
     }
 }
+
+
+
+
+
