@@ -1,12 +1,12 @@
 import java.util.Arrays;
-
 public class LongestCommonPrefix {
+
     public static void main(String[] args) {
         String strs[] = {"find", "find", "find"};
-        System.out.println(longesCommonPrefix(strs));
+        System.out.println(longestCommonPrefix(strs));
     }
 
-    public static String longesCommonPrefix(String strs[]) {
+    public static String longestCommonPrefix(String strs[]) {
         if (strs.length == 0) {
             return "";
         }
