@@ -1,4 +1,4 @@
-public class bestTimeToBuyAndSellStock{
+ class bestTimeToBuyAndSellStock{
     public static void main(String[] args) {
         bestTimeToBuyAndSellStock sc = new bestTimeToBuyAndSellStock();
         int[] prices = {7, 1, 5, 3, 6, 4};
