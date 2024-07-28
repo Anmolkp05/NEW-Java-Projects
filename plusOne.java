@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class plusOne {
+ class plusOne {
     public static void main(String[] args)
     {
         int[] digits={1,9};
