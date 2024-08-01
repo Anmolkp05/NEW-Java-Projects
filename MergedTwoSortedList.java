@@ -9,7 +9,7 @@
   }
 
 
-class Solution {
+class Sb {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode();
         ListNode current = dummy;
