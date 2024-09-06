@@ -3,7 +3,7 @@ import java.util.Arrays;
  class distinctDifferenceArray {
     public static void main(String[] args)
     {
-        int[] nums={3,2,3,4,2};
+        int[] nums={1,2,3,4,5};
         System.out.println(Arrays.toString(distinctDifferenceArray(nums)));
 
     }
