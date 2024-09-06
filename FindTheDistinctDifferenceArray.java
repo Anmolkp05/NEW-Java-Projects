@@ -21,7 +21,7 @@ import java.util.Arrays;
         return diff;
     }
 
-    private static int countDistinctElements(int[] nums, int start, int end) {
+    public static int countDistinctElements(int[] nums, int start, int end) {
         boolean[] visited = new boolean[100000];
         int count = 0;
         for (int i = start; i <= end; i++) {
