@@ -17,7 +17,8 @@ public class AddBinary {
             {
                 int t1=0,t2=0,sum;
                 if(n1>=0)
-                    t1=a.charAt(n1--)-'0';
+                    t1=a.charAt(n1)-'0';
+                n1--;
                 if(n2>=0)
                     t2=b.charAt(n2--)-'0';
                 sum=t1+t2+c;
