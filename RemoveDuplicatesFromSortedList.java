@@ -20,4 +20,4 @@ public class RemoveDuplicatesFromSortedList {
 
         return head;
 }
-}
+ }
