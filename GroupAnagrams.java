@@ -7,10 +7,12 @@ public class GroupAnagrams {
 
         for (List<String> group : result) {
             System.out.println(group);
+        }
 
-    }
 
-        public static List<List<String>> groupAnagrams(String[] strs) {
+        }
+
+        public static List<List<String>> groupAnagrams (String[]strs){
             Map<String, List<String>> map = new HashMap<>();
 
             for (String str : strs) {
@@ -28,5 +30,7 @@ public class GroupAnagrams {
             return new ArrayList<>(map.values());
         }
     }
+
+
 
 
