@@ -9,23 +9,23 @@ public class BinaryTreePostOrderTraversal {
         root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
 
-        List<Integer> result = preorderTraversal(root);
+        List<Integer> result = postorderTraversal(root);
         System.out.println(result);
     }
 
-    public static List<Integer> preorderTraversal(TreeNode root) {
+    public static List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
-        preOrderHelper(root, result);
+        postOrderHelper(root, result);
         return result;
     }
 
-    private static void preOrderHelper(TreeNode node, List<Integer> result) {
+    private static void postOrderHelper(TreeNode node, List<Integer> result) {
         if (node == null) {
             return;
         }
 
-        preOrderHelper(node.left, result);
-        preOrderHelper(node.right, result);
+        postOrderHelper(node.left, result);
+        postOrderHelper(node.right, result);
         result.add(node.val);
     }
 
