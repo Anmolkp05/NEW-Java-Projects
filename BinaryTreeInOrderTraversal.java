@@ -9,24 +9,24 @@ public class BinaryTreeInOrderTraversal {
         root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
 
-        List<Integer> result = preorderTraversal(root);
+        List<Integer> result = inorderTraversal(root);
         System.out.println(result);
     }
 
-    public static List<Integer> preorderTraversal(TreeNode root) {
+    public static List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
-        preOrderHelper(root, result);
+        inOrderHelper(root, result);
         return result;
     }
 
-    private static void preOrderHelper(TreeNode node, List<Integer> result) {
+    private static void inOrderHelper(TreeNode node, List<Integer> result) {
         if (node == null) {
             return;
         }
 
-        preOrderHelper(node.left, result);
+        inOrderHelper(node.left, result);
         result.add(node.val);
-        preOrderHelper(node.right, result);
+        inOrderHelper(node.right, result);
     }
 
     static class TreeNode {

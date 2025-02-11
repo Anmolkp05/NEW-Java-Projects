@@ -1,5 +1,3 @@
-import com.sun.source.tree.Tree;
-
 public class CountNumberOfNodes {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
@@ -15,10 +13,11 @@ public class CountNumberOfNodes {
         if(root == null ){
             return 0;
         }
+
         int l = countNodes(root.left);
         int r = countNodes(root.right);
-
         return l+r+1;
+
 
 
 
