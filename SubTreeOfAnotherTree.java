@@ -21,7 +21,10 @@ public class SubTreeOfAnotherTree {
         if (subRoot == null || root == null) {
             return false;
         }
-        return issameTree(root.left, subRoot.left) && issameTree(root.right, subRoot.right);
+        if(root.val==subRoot.val){
+            return issameTree(root.left, subRoot.left) && issameTree(root.right, subRoot.right);
+        }
+        return false;
     }
 
     public static boolean isSubtree(TreeNode root, TreeNode subRoot) {
