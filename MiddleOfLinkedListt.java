@@ -1,4 +1,4 @@
-public class MiddleOfLinkedList {
+public class MiddleOfLinkedListt {
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
@@ -6,7 +6,7 @@ public class MiddleOfLinkedList {
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
 
-        MiddleOfLinkedList solution = new MiddleOfLinkedList();
+        MiddleOfLinkedListt solution = new MiddleOfLinkedListt();
         ListNode middle = solution.middleNode(head);
         System.out.println(middle.val);
     }
