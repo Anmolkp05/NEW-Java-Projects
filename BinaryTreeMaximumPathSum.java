@@ -17,7 +17,8 @@ public class BinaryTreeMaximumPathSum {
         return maxSum;
     }
 
-    public static int calculateMaxPath(TreeNode node) {
+    public static int calculateMaxPath(TreeNode node)
+    {
         if (node == null) return 0;
 
         int left = Math.max(calculateMaxPath(node.left), 0);
