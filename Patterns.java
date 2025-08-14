@@ -4,11 +4,12 @@ public class Patterns {
       //  pattern2(5);
       //  pattern3(5);
       //  pattern4(5);
-      //  pattern5(5);
+       // pattern5(5);
       //  pattern6(5);
        // pattern7(5);
-       pattern8(4);
-      //  pattern9(5);
+       //pattern8(5);
+       //pattern9(5);
+        pattern10(5);
 
     }
     static void pattern1(int N)
@@ -88,7 +89,7 @@ public class Patterns {
 
         }*/
         for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N - i - 1; j++) {
+            for (int j = 0; j <= N - i - 1; j++) {
                 System.out.print("*");
             }
             System.out.println();
@@ -137,7 +138,7 @@ public class Patterns {
                 System.out.print(" ");
             }
 
-            for (int j = 0; j < (2 * (N - i) - 1); j++) {
+            for (int j = 0; j <2*N-(2*i+1); j++) {  //2*(N-i)-1 main thing in this pattern
                 System.out.print("*");
             }
 
@@ -145,6 +146,56 @@ public class Patterns {
 
 
 
+            System.out.println();
+
+        }
+    }
+    static void pattern9(int N) {
+        for (int i = 0; i < N; i++)
+        {
+            for (int j=0;j<N-i-1;j++ )
+            {
+                System.out.print(" ");
+            }
+
+            for (int j=0;j<(2*i+1);j++ )
+            {
+                System.out.print("*");
+            }
+
+
+
+
+
+            System.out.println();
+
+        }
+        for (int i = 0; i < N; i++) {
+
+            for (int j = 0; j < i; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 0; j < 2 * N - (2 * i + 1); j++) {  //2*(N-i)-1 main thing in this pattern
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    static void pattern10(int N)
+    {
+        for (int i =0;i<N;i++)
+        {
+            for (int j=0;j<=i;j++ )
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = 0; i <N; i++) {
+            for (int j = 0; j <N - i - 1; j++) {
+                System.out.print("*");
+            }
             System.out.println();
 
         }
