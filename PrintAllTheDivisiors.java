@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PrintAllTheDivisiors {
     public static void main(String[] args) {
@@ -26,6 +27,7 @@ public class PrintAllTheDivisiors {
                 }
             }
         }
+        Collections.sort(divisorsList);
 
         return divisorsList;
     }

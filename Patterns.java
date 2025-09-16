@@ -9,7 +9,10 @@ public class Patterns {
        // pattern7(5);
        //pattern8(5);
        //pattern9(5);
-        pattern10(5);
+       // pattern10(5);
+       // pattern11(5);
+        pattern13(5);
+
 
     }
     static void pattern1(int N)
@@ -200,6 +203,41 @@ public class Patterns {
 
         }
     }
+    static void pattern11(int N) {
+        for (int i = 1; i <= N; i++) {
+            for (int j = 1; j <= i; j++) {
+                if ((i + j) % 2 == 0) {
+                    System.out.print("1 ");
+                } else {
+                    System.out.print("0 ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    static void pattern12(int n) {
+        int num = 1;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(num + " ");
+                num++;
+            }
+            System.out.println();
+        }
+    }
+    static void pattern13(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (char ch = 'A'; ch < 'A' + i; ch++) {
+                System.out.print(ch);
+            }
+
+            for (char ch = 'A'; ch < 'A' + i - 1; ch++) {
+                System.out.print(ch);
+            }
+            System.out.println();
+        }
+    }
+
 
 
 
