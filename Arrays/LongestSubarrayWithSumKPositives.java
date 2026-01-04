@@ -1,9 +1,6 @@
 package Arrays;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class LongestSubarrayWithSumK
+public class LongestSubarrayWithSumKPositives
 {
     public static void main(String[] args) {
 
