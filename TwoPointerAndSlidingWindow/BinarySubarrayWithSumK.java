@@ -1,13 +1,16 @@
 package TwoPointerAndSlidingWindow;
 
+import java.util.*;
+
 public class BinarySubarrayWithSumK {
     public static void main(String[] args) {
 
 
         int[] arr = {1, 0, 1, 1, 1, 1};
         int k = 3;
-        System.out.println(numSubarraysWithSum(arr,k));
+        System.out.println(numSubarraysWithSum(arr, k));
     }
+
     public static int numSubarraysWithSum(int[] nums, int goal) {
 
         /*
@@ -25,12 +28,34 @@ public class BinarySubarrayWithSumK {
             }
         }
 
+        return count; */
+
+
+        Map<Integer, Integer> prefixSumCount = new HashMap<>();
+
+        int count = 0, sum = 0;
+
+        prefixSumCount.put(0, 1);
+
+        for (int num : nums) {
+            sum += num;
+
+            if (prefixSumCount.containsKey(sum - goal)) {
+                count += prefixSumCount.get(sum - goal);
+            }
+
+            prefixSumCount.put(sum, prefixSumCount.getOrDefault(sum, 0) + 1);
+        }
+
         return count;
 
-         */
 
+
+
+        /*
             return atMost(nums, goal) - atMost(nums, goal - 1);
         }
+
 
         public static int atMost(int[] nums, int k) {
             if (k < 0) return 0;
@@ -50,6 +75,10 @@ public class BinarySubarrayWithSumK {
             }
 
             return count;
+
+         */
+
+
         }
     }
 
