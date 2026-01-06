@@ -4,9 +4,9 @@ import java.util.*;
 
 public class BinarySubarrayWithSumK {
     public static void main(String[] args) {
-        int[] arr = {1, 0, 1, 1, 1, 1};
-        int k = 3;
-        System.out.println(numSubarraysWithSum(arr, k));
+        int[] nums = {1, 0, 1, 0, 1};
+        int goal = 2;
+        System.out.println(numSubarraysWithSum(nums, goal));
     }
 
     public static int numSubarraysWithSum(int[] nums, int goal) {
