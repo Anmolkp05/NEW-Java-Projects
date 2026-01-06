@@ -5,8 +5,8 @@ import java.util.*;
 public class LongestSubarrayWithSumKPosAndNeg {
     public static void main(String[] args) {
 
-        int[] arr = {1, 2, 3, 1, 1, 1, 1};
-        int k = 3;
+        int[] arr = {-5, 8, -14, 2, 4, 12};
+        int k = -5;
         System.out.println(longestSubarrayII(arr,k));
     }
     public static int longestSubarrayII(int[] arr, int k) {
@@ -39,7 +39,7 @@ public class LongestSubarrayWithSumKPosAndNeg {
         for (int i = 0; i < arr.length; i++) {
             sum += arr[i];
             if (sum == k) {
-                maxLen = Math.max(maxLen, i + 1);
+                maxLen = (i + 1);
             }
             int rem = sum - k;
             if (map.containsKey(rem)) {
