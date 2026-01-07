@@ -26,6 +26,8 @@ public class NumberOfSubstringContainingAllThreeCharacters {
 
          */
 
+        //TC= 0(N)
+        //SC= 0(1)
         int[] hash = {-1,-1,-1};
         int lastSeen = 0;
         for(int i=0;i<s.length();i++){

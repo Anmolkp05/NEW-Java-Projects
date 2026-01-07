@@ -9,7 +9,6 @@ public class CountNumberOfNiceSubarray {
         System.out.println(numberOfSubarrays(nums,k));
     }
     public static int numberOfSubarrays(int[] nums, int k) {
-        // Initialize counter for total nice subarrays
         int count = 0;
 
         for (int start = 0; start < nums.length; start++) {
