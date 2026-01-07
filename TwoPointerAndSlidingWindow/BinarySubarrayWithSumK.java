@@ -11,7 +11,7 @@ public class BinarySubarrayWithSumK {
 
     public static int numSubarraysWithSum(int[] nums, int goal) {
 
-        /*
+
 
         int count = 0;
 
@@ -27,9 +27,11 @@ public class BinarySubarrayWithSumK {
             }
         }
 
-        return count; */
+        return count;
 
 
+
+        /*
         Map<Integer, Integer> prefixSumCount = new HashMap<>();
 
         int count = 0, sum = 0;
@@ -49,7 +51,7 @@ public class BinarySubarrayWithSumK {
         return count;
 
 
-
+        */
 
         /*
             return atMost(nums, goal) - atMost(nums, goal - 1);

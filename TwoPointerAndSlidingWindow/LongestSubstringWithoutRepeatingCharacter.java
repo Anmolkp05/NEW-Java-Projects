@@ -1,9 +1,7 @@
 package TwoPointerAndSlidingWindow;
 
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.*;
 
 public class LongestSubstringWithoutRepeatingCharacter {
     public static void main(String[] args) {
@@ -80,8 +78,9 @@ public class LongestSubstringWithoutRepeatingCharacter {
 
         for (int right = 0; right < s.length(); right++) {
             char c = s.charAt(right);
-            if (map.containsKey(c) && map.get(c) >= left) {
-                left = map.get(c) + 1;
+            int lastIndex = map.getOrDefault(c, -1);   //if (map.containsKey(c) && map.get(c) >= left) {
+            if (lastIndex >= left) {
+                left = lastIndex + 1;
             }
             map.put(c, right);
             maxlength = Math.max(maxlength, right - left + 1);
