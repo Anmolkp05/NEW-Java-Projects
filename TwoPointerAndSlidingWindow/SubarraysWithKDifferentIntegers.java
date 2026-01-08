@@ -12,9 +12,9 @@ public class SubarraysWithKDifferentIntegers {
 
 
         /*
+         //TC = 0(N2)  - each element is added/removed at most once.
+        //SC=(K)  - distinct elements  if all the elements are distinct then 0(N) -> 0(K)
 
-        //TC = (N2)
-        //SC = (N)
         int count=0;
         for(int i=0;i<nums.length;i++){
             HashMap<Integer,Integer> map = new HashMap<>();
@@ -65,7 +65,7 @@ public class SubarraysWithKDifferentIntegers {
  /*
                                                     //BEST ONE
         //TC = 0(N)  - each element is added/removed at most once.
-        //SC=(K)  - max element in nums
+        //SC=(K)  - distinct elements  if all the elements are distinct then 0(N) -> 0(K)
         return atMost(nums, k) - atMost(nums, k - 1);
     }
     public static int atMost(int[] nums, int k) {
@@ -92,6 +92,8 @@ public class SubarraysWithKDifferentIntegers {
         }
 
   */
+        //TC= 0(N)
+        //SC = 0(K)  (MAX VALUE IN ARRAY + 1)
 
         return atMost(nums, k) - atMost(nums, k - 1);
     }
