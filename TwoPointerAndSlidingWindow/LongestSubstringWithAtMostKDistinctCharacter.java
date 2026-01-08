@@ -4,7 +4,7 @@
 
     public class LongestSubstringWithAtMostKDistinctCharacter {
         public static void main(String[] args) {
-            String s = "aababbcaacc";
+            String s = "aaaaa";
             int k = 2;
 
             System.out.println(kDistinctChar(s, k));
