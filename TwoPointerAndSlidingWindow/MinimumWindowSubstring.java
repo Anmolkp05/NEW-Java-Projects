@@ -55,6 +55,9 @@ public class MinimumWindowSubstring {
     }
 
          */
+
+        // TC = 0(2N)+0(M) -> 0(N)
+        //SC = 0(M)  OR we can say 0(256) --> 0(1 )
         int minLen = Integer.MAX_VALUE;
         int sIndex = -1;
         int r = 0;
