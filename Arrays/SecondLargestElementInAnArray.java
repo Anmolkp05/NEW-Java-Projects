@@ -58,6 +58,8 @@ public class SecondLargestElementInAnArray {
         return  secLargest;
 
          */
+        //TC = 0(N)
+        //SC = 0(1)
         int largest = arr[0];
         int secLargest = -1;
         for(int i=0;i<arr.length;i++){
