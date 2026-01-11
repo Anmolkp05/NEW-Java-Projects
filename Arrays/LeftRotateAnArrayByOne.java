@@ -17,6 +17,8 @@ public class LeftRotateAnArrayByOne {
             System.out.print(temp[i] + " ");
         }
         System.out.println();
+
+
     }
 
 }
