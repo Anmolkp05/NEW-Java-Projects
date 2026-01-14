@@ -3,7 +3,7 @@ package LinkedList;
 import java.util.*;
 
 // Definition for singly-linked list.
-public class ListNode {
+class ListNode {
     int val;
     ListNode next;
     ListNode() {}
@@ -45,7 +45,7 @@ class Solution {
         return dummy.next;
     }
 };
-public class Main {
+class Main {
     static ListNode createList(int[] arr) {
         ListNode head = new ListNode(arr[0]);
         ListNode temp = head;
