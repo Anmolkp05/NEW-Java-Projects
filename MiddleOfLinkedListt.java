@@ -1,3 +1,5 @@
+import LinkedList.ListNode;
+
 public class MiddleOfLinkedListt {
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
