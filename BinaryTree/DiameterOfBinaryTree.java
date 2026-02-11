@@ -1,3 +1,5 @@
+package BinaryTree;
+
 public class DiameterOfBinaryTree {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
