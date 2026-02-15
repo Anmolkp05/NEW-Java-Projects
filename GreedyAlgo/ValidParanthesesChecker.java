@@ -10,13 +10,13 @@ public class ValidParanthesesChecker {
         System.out.print("Enter the string: ");
         String input = sc.nextLine();
 
-        /*if (isValid(input, 0, 0)) {
+        if (checkValidString(input)) {
             System.out.println("Valid parenthesis string");
         } else {
             System.out.println("Invalid parenthesis string");
         }
 
-         */
+
 
     }
 
