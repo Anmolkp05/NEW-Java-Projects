@@ -9,6 +9,7 @@ public class BinarySubarrayWithSumK {
         System.out.println(numSubarraysWithSum(nums, goal));
     }
 
+
     public static int numSubarraysWithSum(int[] nums, int goal) {
 
 
