@@ -45,33 +45,67 @@ public class Candy {
 
     //TC = 0(3N) -> 0(N)
     //sc=  0(N)
-      public static int candy(int[] ratings) {
-        int n = ratings.length;
+//      public static int candy(int[] ratings) {
+//        int n = ratings.length;
+//
+//        int[] left = new int[n];  //sc = 0(N)
+//        Arrays.fill(left, 1);   //0(N)
+//
+//        for (int i = 1; i < n; i++) {   //0(N)
+//            if (ratings[i] > ratings[i - 1]) {
+//                left[i] = left[i - 1] + 1;
+//            } else {
+//                left[i] = 1;
+//            }
+//        }
+//        int curr = 1, right = 1;
+//        int sum = Math.max(1, left[n-1]);
+//        for (int i = n - 2; i >= 0; i--) {   //0(N)
+//            if (ratings[i] > ratings[i + 1]) {
+//                curr = right+1;
+//                right=curr;
+//
+//            } else {
+//                left[i] = 1;
+//            }
+//            sum = sum + Math.max(left[i],curr);
+//        }
+//
+//        return sum;
+//    }
 
-        int[] left = new int[n];  //sc = 0(N)
-        Arrays.fill(left, 1);   //0(N)
 
-        for (int i = 1; i < n; i++) {   //0(N)
-            if (ratings[i] > ratings[i - 1]) {
-                left[i] = left[i - 1] + 1;
-            } else {
-                left[i] = 1;
+    //TC =0(N)
+    //Sc = 0(1)
+    public static int candy(int[] ratings) {
+        int sum=1,i=1;
+
+        while(i<ratings.length)  {
+            if(ratings[i]==ratings[i-1]){
+                sum+=1;
+                i++;
+                continue;
             }
-        }
-        int curr = 1, right = 1;
-        int sum = Math.max(1, left[n-1]);
-        for (int i = n - 2; i >= 0; i--) {   //0(N)
-            if (ratings[i] > ratings[i + 1]) {
-                curr = right+1;
-                right=curr;
-
-            } else {
-                left[i] = 1;
+            int peak =1;
+            while(i<ratings.length && ratings[i]>ratings[i-1]) {
+                peak+=1;
+                sum+=peak;
+                i++;
             }
-            sum = sum + Math.max(left[i],curr);
-        }
+            int down = 1;
+            while(i<ratings.length && ratings[i]<ratings[i-1]) {
+                sum+=down;
+                i++;
+                down++;
+            }
+            if(down>peak) {
+                sum = sum + ((down-peak));
+            }
 
+
+        }
         return sum;
+
     }
 
 }
