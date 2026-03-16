@@ -1,7 +1,9 @@
+package BinaryTree;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class BinaryTreeInOrderTraversal {
+public class BinaryTreePostOrderTraversal {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
@@ -9,24 +11,24 @@ public class BinaryTreeInOrderTraversal {
         root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
 
-        List<Integer> result = inorderTraversal(root);
+        List<Integer> result = postorderTraversal(root);
         System.out.println(result);
     }
 
-    public static List<Integer> inorderTraversal(TreeNode root) {
+    public static List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
-        inOrderHelper(root, result);
+        postOrderHelper(root, result);
         return result;
     }
 
-    private static void inOrderHelper(TreeNode node, List<Integer> result) {
+    private static void postOrderHelper(TreeNode node, List<Integer> result) {
         if (node == null) {
             return;
         }
 
-        inOrderHelper(node.left, result);
+        postOrderHelper(node.left, result);
+        postOrderHelper(node.right, result);
         result.add(node.val);
-        inOrderHelper(node.right, result);
     }
 
     static class TreeNode {
