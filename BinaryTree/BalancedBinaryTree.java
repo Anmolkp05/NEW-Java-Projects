@@ -1,17 +1,18 @@
+package BinaryTree;
+
 public class BalancedBinaryTree {
-
     static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
+            int val;
+            TreeNode left;
+            TreeNode right;
 
-        TreeNode(int x) {
-            val = x;
-            left = null;
-            right = null;
+            TreeNode(int x) {
+                val = x;
+                left = null;
+                right = null;
+            }
+
         }
-
-    }
 
         public static void main(String[] args) {
             BalancedBinaryTree solution = new BalancedBinaryTree();
@@ -51,5 +52,7 @@ public class BalancedBinaryTree {
             return Math.max(leftHeight, rightHeight) + 1;
         }
     }
+
+
 
 
