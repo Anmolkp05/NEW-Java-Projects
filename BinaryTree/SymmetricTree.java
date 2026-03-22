@@ -10,6 +10,9 @@ public class SymmetricTree {
         System.out.println(isSymmetric(root)); // true
     }
 
+    // Time Complexity = O(n) where n is the number of nodes in the tree.
+    //In the best case (balanced tree) SC = O(log n)
+    //In the worst case SC = O(n)
     public static boolean isSymmetric(TreeNode root) {
         if (root == null) {
             return true;
