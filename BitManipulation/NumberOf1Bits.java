@@ -23,7 +23,7 @@ public class NumberOf1Bits {
 //        while(n!=0){
 //            n=(n&(n-1));
 //            count+=1;
-//
+//   like (3&2) krne   se ek set bit 0 hota hai so loop se sara ek ek krke 0 ho jayega and we can calculate also
 //
 //        }
 //        return count;
