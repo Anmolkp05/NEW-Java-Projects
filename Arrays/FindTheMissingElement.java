@@ -56,7 +56,7 @@ public class FindTheMissingElement {
 //
 //        return sum-sum1;
 
-//  TC=0(2N)
+//  TC=0(2N)/ after one loop it 0(1)
 //  SC=(1)
         int x1 = 0;
         int x2 = 0;
@@ -75,6 +75,14 @@ public class FindTheMissingElement {
         //I CAN PUT THIS INSIDE UPPER ONE ..
 
         return x1 ^ x2;
+
+        //1 ^ 2 ^ 3 ^ 4 ^ 5
+        //4 ^ 1 ^ 5 ^ 2
+        //(1 ^ 2 ^ 3 ^ 4 ^ 5) ^ (4 ^ 1 ^ 5 ^ 2)
+        //= 1^1 ^ 2^2 ^ 4^4 ^ 5^5 ^ 3
+        //= 0 ^ 0 ^ 0 ^ 0 ^ 3
+        //= 3
+        // for understanding
 
 
 

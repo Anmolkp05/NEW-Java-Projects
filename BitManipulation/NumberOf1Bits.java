@@ -3,7 +3,7 @@ package BitManipulation;
 public class NumberOf1Bits {
     static void main() {
 
-        System.out.println(hammingWeight( 2));
+        System.out.println(hammingWeight( 11));
     }
     public static int hammingWeight(int n) {
 //  Time Complexity: O(1) Loop runs 32 times (fixed) Doesn’t depend on input size
