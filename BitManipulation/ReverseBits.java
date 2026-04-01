@@ -13,7 +13,7 @@ public class ReverseBits {
 
             result |= (n & 1);     // take last bit of n
 
-            n >>>= 1;              // unsigned right shift
+            n >>>= 1;              // unsigned right shift  "just shift, ignore sign"
         }
 
         return result;
