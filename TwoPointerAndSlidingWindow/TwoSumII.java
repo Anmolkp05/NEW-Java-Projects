@@ -33,7 +33,7 @@ public class TwoSumII {
 
     //HASHMAP APPROACH
     //TIME O(N)
-    //SPACE 0(1)
+    //SPACE 0(N)
 //    public static int[] twoSum(int[] num, int target) {
 //        HashMap<Integer, Integer> map = new HashMap<>();
 //        for (int i = 0; i < num.length; i++) {

@@ -14,12 +14,8 @@ public class RemoveDuplicatesFromSortedArray {
 
         //TC = 0(N*1) = 0(N)
         //SC - 0(N)
-
         HashSet<Integer> seen = new HashSet<>();
-
-
         int index = 0;
-
         for (int num : nums) {
             if (!seen.contains(num)) {
                 seen.add(num);
@@ -58,7 +54,7 @@ public class RemoveDuplicatesFromSortedArray {
 
         for (int j = 1; j < nums.length; j++) {
             if (nums[j] != nums[i]) {
-                i++;
+                i++; // yr yaha pr fiya hai bcz first unique element ko disturb na ho .. uske bad me aaye unique milne k bad pehle barh jaye then store ho
                 nums[i] = nums[j];
             }
         }
