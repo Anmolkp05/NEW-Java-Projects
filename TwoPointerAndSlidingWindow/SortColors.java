@@ -1,10 +1,13 @@
 package TwoPointerAndSlidingWindow;
+
 import java.util.Arrays;
+
+
 
 public class SortColors {
     static void main() {
         SortColors SC = new SortColors();
-        int[] nums = {2,0,2,2,2,1,1,0};
+        int[] nums = {2,0,2,2,1,1,0};
         SC.sortColors(nums);
         System.out.println(Arrays.toString(nums));
     }
@@ -45,9 +48,29 @@ public class SortColors {
         int mid = 0;
         int right = nums.length-1;
 
-        while(mid<right){
+        while(mid<=right){
+            if(nums[mid]==2){
+                swap(nums,mid,right);
+                right--;
+            }
+            else if(nums[mid]==0){
+                swap(nums, mid,left);
+                left++;
+                mid++;
+
+            }
+            else if(nums[mid]==1){
+                mid++;
+            }
+
 
 
         }
     }
+    public void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
 }
+
