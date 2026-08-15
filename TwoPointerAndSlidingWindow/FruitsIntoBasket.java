@@ -87,10 +87,6 @@ public class FruitsIntoBasket {
 
 
         }
-
-
-
-
         return  maxFruits;
     }
 }

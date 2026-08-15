@@ -12,6 +12,8 @@ public class LongestRepeatingCharacterReplacement {
     public static int characterReplacement(String s, int k){
 
         /*
+        //TC = 0(n^2)
+        //sc = 0(26)
         int maxLength = 0;
 
 
