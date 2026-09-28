@@ -9,17 +9,34 @@ public class LeftRotateAnArrayByOne {
 
 
     public static void solve(int[] arr, int n) {
-        int[] temp = new int[n];
+        //TC = 0(N)+0(N)= 0(N)
+        //sc = 0(N)
+//                int[] temp = new int[n];
+//
+//        for(int i = 1; i < n; i++){
+//            temp[i - 1] = arr[i];
+//        }
+//        temp[n - 1] = arr[0];
+//        for (int i = 0; i < n; i++) {
+//            System.out.print(temp[i] + " ");
+//        }
+//        System.out.println();
+
+
+
+
+        //TC = 0(n)
+        //SC = 0(1)
+        int first = arr[0];
 
         for(int i = 1; i < n; i++){
-            temp[i - 1] = arr[i];
+            arr[i - 1] = arr[i];
         }
-        temp[n - 1] = arr[0];
+        arr[n-1] = first;
         for (int i = 0; i < n; i++) {
-            System.out.print(temp[i] + " ");
+            System.out.print(arr[i] + " ");
         }
         System.out.println();
-
 
     }
 
