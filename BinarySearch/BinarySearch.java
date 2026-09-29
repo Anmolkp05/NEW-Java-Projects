@@ -32,7 +32,7 @@ public class BinarySearch {
     }
 
     //TC = O(log2 N)
-    //SC = 0(1)
+    //SC = O(log N)
     public static int binarySearch(int[] nums, int target,int low, int high){
         if (low > high) {
             return -1;
