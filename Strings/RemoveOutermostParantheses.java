@@ -9,26 +9,46 @@ public class RemoveOutermostParantheses {
         System.out.println(removeOuterParentheses("(()())"));
     }
     public static String removeOuterParentheses(String s) {
-        Stack<Character> stack = new Stack<>();
+        //tc = 0(N)
+        //sc = 0()
+//        Stack<Character> stack = new Stack<>();
+//        StringBuilder result = new StringBuilder();
+//
+//        for (char c : s.toCharArray()) {
+//
+//            if (c == '(') {
+//                if (!stack.isEmpty()) {
+//                    result.append(c);
+//                }
+//                stack.push(c);
+//
+//            } else {
+//                stack.pop();
+//                if (!stack.isEmpty()) {
+//                    result.append(c);
+//                }
+//            }
+//        }
+//
+//        return result.toString();
+
         StringBuilder result = new StringBuilder();
+        int count = 0;
 
         for (char c : s.toCharArray()) {
-
             if (c == '(') {
-                if (!stack.isEmpty()) {
+                if (count > 0) {
                     result.append(c);
                 }
-                stack.push(c);
-
+                count++;
             } else {
-                stack.pop();
-                if (!stack.isEmpty()) {
+                count--;
+                if (count > 0) {
                     result.append(c);
                 }
             }
         }
 
         return result.toString();
-
     }
 }
