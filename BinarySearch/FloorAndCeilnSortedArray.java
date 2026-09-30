@@ -6,6 +6,9 @@ public class FloorAndCeilnSortedArray {
         int[] nums = {3, 4, 4, 7, 8, 10};
         System.out.println(Arrays.toString(getFloorAndCeil(nums,5)));
     }
+
+    //TC = 0(log2N)+ 0(log2N) -> 0(2Log2N)) -> 0(log2N)
+    //sc = 0(1)
     public static int[] getFloorAndCeil(int[] nums, int x) {
         int first = -1;
         int last = -1;

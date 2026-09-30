@@ -6,6 +6,8 @@ public class FindFirstandLastPositionofElementinSortedArray {
         int[] arr = {5,7,7,8,8,10};
         System.out.println(Arrays.toString(searchRange(arr,8)));
     }
+    //TC = 0(log2N)+ 0(log2N) -> 0(2Log2N)) -> 0(log2N)
+    //sc = 0(1)
     public static int[] searchRange(int[] nums, int target) {
         int first = -1;
         int last = -1;
