@@ -1,12 +1,12 @@
 package BinarySearch;
-import java.util.*;
-public class FindFirstandLastPositionofElementinSortedArray {
-    static void main() {
 
-        int[] arr = {5,7,7,8,8,10};
-        System.out.println(Arrays.toString(searchRange(arr,8)));
+import java.util.*;
+public class FloorAndCeilnSortedArray {
+    static void main() {
+        int[] nums = {3, 4, 4, 7, 8, 10};
+        System.out.println(Arrays.toString(getFloorAndCeil(nums,5)));
     }
-    public static int[] searchRange(int[] nums, int target) {
+    public static int[] getFloorAndCeil(int[] nums, int x) {
         int first = -1;
         int last = -1;
 
@@ -16,8 +16,8 @@ public class FindFirstandLastPositionofElementinSortedArray {
         while (low <= high) {
             int mid = low + (high - low) / 2;
 
-            if (nums[mid] >= target) {
-                first = mid;
+            if (nums[mid] >= x) {
+                first = nums[mid];
                 high = mid - 1;
             } else {
                 low = mid + 1;
@@ -30,18 +30,16 @@ public class FindFirstandLastPositionofElementinSortedArray {
         while (low <= high) {
             int mid = low + (high - low) / 2;
 
-            if (nums[mid] <= target) {
-                last = mid;
+            if (nums[mid] <= x) {
+                last = nums[mid];
                 low = mid + 1;
             } else {
                 high = mid - 1;
             }
         }
 
-        if (first == -1 || nums[first] != target) {
-            return new int[]{-1, -1};
-        }
 
-        return new int[]{first, last};
+
+        return new int[]{last, first};
     }
 }
