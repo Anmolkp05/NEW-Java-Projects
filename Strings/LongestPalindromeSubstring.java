@@ -49,7 +49,7 @@ public class LongestPalindromeSubstring {
 //        int start = 0, maxlength = 0;
 //        for (int i = 0; i < s.length(); i++) {
 //            int odd = expand(s, i, i);
-//            int even = expand(s, i, i + 1);
+////            int even = expand(s, i, i + 1);
 //            int len = Math.max(odd, even);
 //            if (len > maxlength) {
 //                maxlength = len;
